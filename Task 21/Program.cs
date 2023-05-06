@@ -6,9 +6,11 @@ int [,] CreataArray ()
 int m = 3;
 int n = 4;
 int [,] array = new int[m,n];
-for (int i=0; i< array.GetLength(0);i++)
+int Row = array.GetLength(0);
+int Column = array.GetLength(1);
+for (int i=0; i< Row;i++)
 {
-    for (int j=0;j<array.GetLength(1);j++)
+    for (int j=0;j<Column;j++)
     {
         array[i,j]=new Random ().Next(1,10);
     }
@@ -17,9 +19,11 @@ return array;
 }
 void PrintArray (int [,] array)
 {
-    for (int i=0; i< array.GetLength(0);i++)
+int Row = array.GetLength(0);
+int Column = array.GetLength(1);
+    for (int i=0; i< Row;i++)
 {
-    for (int j=0;j<array.GetLength(1);j++)
+    for (int j=0;j<Column;j++)
     {
         Console.Write($"{array[i,j]} | ");
     }
